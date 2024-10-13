@@ -1,0 +1,44 @@
+extends layout
+
+block main
+  h3 What would you like to change?
+  form(action=`/activities/edit/${activityId}` method="post")
+    dl
+      dt
+        label(for="title") Activity Title:
+      dd
+        input(type="text"
+              id="title"
+              name="title"
+              placeholder="Activity Title"
+              value=title)
+      dt
+        label(for="category") Category:
+      dd
+        input(type="text"
+              id="category"
+              name="category"
+              placeholder="Category"
+              value=category)
+      dt
+        label(for="date") Date:
+      dd
+        input(type="date"
+              id="date"
+              name="date"
+              placeholder="Date"
+              value=date)
+      dt
+        label(for="min_to_complete") Time (in minutes):
+      dd
+        input(type="number"
+              id="min_to_complete"
+              name="min_to_complete"
+              placeholder="15"
+              value=min_to_complete
+              min="1")
+
+
+    fieldset.actions
+      input(type="submit" value="Save")
+      a(href="/activities/page/1") Cancel

@@ -1,0 +1,26 @@
+extends layout
+
+block main
+  form(action="/users/edit-account" method="post")
+    dl
+      dt
+        label(for="newUsername") Change your username (if desired)
+      dd
+        input(type="text"
+              id="newUsername"
+              name="newUsername"
+              placeholder="Username"
+              value=newUsername)
+      dt
+        label(for="newPassword") Change your password (if desired)
+      dd
+        input(type="text"
+              name="newPassword"
+              placeholder="Password"
+              value=newPassword)
+
+    fieldset.actions
+      input(type="submit" value="Save")
+      a(href="/activities/page/1") Cancel
+
+block deleteAccount 

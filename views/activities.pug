@@ -1,0 +1,50 @@
+extends layout
+
+block main
+  if myActivities === undefined || myActivities.length === 0
+    p You have no activities! Let's get started and create one. 
+  else 
+    table(cellpadding='5' cellspacing='1' border='1') 
+      tr
+        td  
+          a.sort(href=`/sort/title/${currentPage}`) Name 
+            span(class="fa fa-fw fa-sort")
+        td  
+          a.sort(href=`/sort/category/${currentPage}`) Category
+            span(class="fa fa-fw fa-sort")
+        td  
+          a.sort(href=`/sort/date_completed/${currentPage}`) Date (MM/DD/YYYY)
+            span(class="fa fa-fw fa-sort")
+        td 
+          a.sort(href=`/sort/min_to_complete/${currentPage}`) Time Spent (min)
+            span(class="fa fa-fw fa-sort")
+        td(colspan=2) Actions
+
+      each activity in myActivities
+        tr
+          td=  activity.title
+          td=  activity.category
+          td=  activity.date
+          td=  activity.min_to_complete   
+          td
+            a(href=`/activities/edit/${activity.id}`) Edit 
+          td
+            form(action=`/activity/delete/${activity.id}` method="post")
+              input(type="submit" value="Delete")
+
+
+    table.topMargin(cellpadding='5' cellspacing='1' border='1')
+      tr
+        td.center(colspan=numberOfPagesArr.length) Pages
+      tr
+        each pageNum in numberOfPagesArr
+          td.center(id= currentPage === pageNum ? "currentPage": undefined) 
+            a(href=`/activities/page/${pageNum}`)= pageNum
+
+
+
+block headerLinks
+  .actions
+    a(href="/activity/new") Add New Activity
+
+    

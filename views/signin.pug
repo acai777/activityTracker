@@ -1,0 +1,22 @@
+extends layout
+
+block main
+  div &#8595;  Sign in here &#8595;
+  form(action=`/users/signin` method="post")
+    dl
+      dt
+        label(for="username") Username:
+      dd
+        input(type="text" name="username" placeholder="Username" value=username)
+
+      dt
+        label(for="password") Password:
+      dd
+        input(type="password" name="password" placeholder="Password")
+
+    fieldset.actions
+      input(type="submit" value="Sign In")
+
+block signIn
+block headerLinks 
+  a.topPad(href="/users/create-account") Don't have an account? Click here to create one

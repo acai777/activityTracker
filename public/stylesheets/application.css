@@ -1,0 +1,98 @@
+.flash {
+  background-color: #cbe5f2;
+  color: #3399cc;
+  margin: 20px 0 1.5rem;
+  max-width: 1000px;
+  padding: 10px 20px;
+}
+
+.flash p {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.flash.error {
+  background-color: #ffcfbf;
+  color: #ff6633;
+}
+
+.flash.success {
+  background-color: #cbf2e5;
+  color: #33cc99;
+}
+
+.flash.info {
+  background-color: #cbd9f2;
+  color: #03452f;
+}
+.center {
+  text-align: center;
+}
+
+body > header {
+  margin: 0 auto;
+  max-width: 1000px;
+  padding: 55px 0 35px;
+}
+body > header h1 {
+  color: #000000;
+  display: inline-block;
+  font-size: 30px;
+  width: 38%;
+  font-weight: normal;
+}
+
+body > header .actions {
+  display: inline-block;
+  text-align: right;
+  width: 60%;
+}
+
+main,
+footer {
+  margin: 0 auto;
+  max-width: 1000px;
+  padding: 0 0 40px;
+}
+
+header {
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+a:visited{
+  color:blue;
+} 
+
+.sort, a.sort:visited {
+    color: #000000;
+    text-decoration: none;
+}
+
+a.sort:hover {
+  color:#33cc99;
+  background-color: yellow;
+}
+
+.topMargin {
+  margin-top: 3em;
+}
+
+.italicize {
+  font-style: italic;
+}
+
+.logo {
+  width: 30px;
+  height: 30px;
+  padding-left: 10px;
+}
+
+.successCat {
+  width: 10em;
+  height: 10em;
+}
+
+#currentPage {
+  background: yellow;
+}

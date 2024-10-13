@@ -1,0 +1,43 @@
+extends layout
+
+block main
+  form(action="/activity/new" method="post")
+    dl
+      dt
+        label(for="title") Enter the title for your new activity:
+      dd
+        input(type="text"
+              id="title"
+              name="title"
+              placeholder="Activity Title"
+              value=title)
+      dt
+        label(for="category") Enter the category for your activity:
+      dd
+        input(type="text"
+              id="category"
+              name="category"
+              placeholder="Category"
+              value=category)
+      dt
+        label(for="date") Enter the date for your activity:
+      dd
+        input(type="date"
+              id="date"
+              name="date"
+              placeholder="Date"
+              value=date)
+      dt
+        label(for="min_to_complete") Enter the time spent (in minutes):
+      dd
+        input(type="number"
+              id="min_to_complete"
+              name="min_to_complete"
+              placeholder="15"
+              value=min_to_complete
+              min="1")
+
+
+    fieldset.actions
+      input(type="submit" value="Save")
+      a(href="/activities/page/1") Cancel

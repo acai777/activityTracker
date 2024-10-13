@@ -1,0 +1,24 @@
+extends layout
+
+block main
+  form(action="/users/create-account" method="post")
+    dl
+      dt
+        label(for="username") Enter a new alphanumeric username:
+      dd
+        input(type="text"
+              id="username"
+              name="username"
+              placeholder="Username"
+              value=username)
+      dt
+        label(for="password") What is the password?
+      dd
+        input(type="password"
+              id="password"
+              name="password"
+              placeholder="Password")
+
+    fieldset.actions
+      input(type="submit" value="Save")
+      a(href="/users/signin") Cancel
